@@ -47,9 +47,9 @@ enum AbaDoApp: String, CaseIterable, Identifiable {
 }
 
 struct ContentView: View {
+    
     var body: some View {
         TabView {
-            // 3. O ForEach percorre automaticamente todos os casos do Enum
             ForEach(AbaDoApp.allCases) { aba in
                 Tab(aba.titulo, systemImage: aba.icone) {
                     // 4. Injeta a View correspondente de cada ficheiro
